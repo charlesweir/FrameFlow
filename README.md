@@ -1,21 +1,27 @@
 # Microsoft Word Plug-in to Lay Out Images and Tables as a Desktop Publisher
 
 <br>
-New, wonderful, support towards desktop publishing in Microsoft Word: beautiful layout of floating images and tables!
+Flawless floating images and tables — placed exactly where they belong!
+
+Bring professional layout control to Microsoft Word. FrameFlow for Word automatically positions framed images and tables near their references, keeping your document clean, consistent, and visually appealing. Preserve image cropping, update all fields in one click, and give Word the layout control it's always needed.
 
 Click [here](#installation) to skip to the installation instructions and [here](#instructions) for the usage instructions.
 
- This plug-in improves Microsoft Word, making it much easier to work with floating images, floating tables and the references to them. On its own, Microsoft Word is poor at positioning images and tables. You have to position images manually; captions don't work very well; and when you add text or change anything, everything ends up in a mess. But it doesn't have to be like that. Other word processing packages are rather good at positioning images and tables: LaTeX users point with pride at its clever image positioning; FrameMaker flows everything around pictures; InDesign and QuarkExpress do wonders! Yet Microsoft Word is programmable, so why not make Word do the same?
+## Why Use FrameFlow?
+
+On its own, Microsoft Word is poor at positioning images and tables. You have to position images manually; captions don't work very well; and when you add text or change anything you need to re-layout everything manually. But other word processing packages are rather good at positioning images and tables: LaTeX users point with pride at its clever image positioning; FrameMaker flows everything around pictures; InDesign and QuarkExpress do wonders! Microsoft Word is programmable, so why not make Word do the same?
 
 This add-in does just that. It makes it easy to insert pictures and tables within frames, and can lay out all those frames in your document in a pleasing way so that each frame is as close as possible to the main reference to it, without being constrained to be on the same page.
 
 The plug-in also addresses two limitations of Word:
 
-*  **Preserving image size and cropping**: If you have an graphic-creating tool that doesn't support Word embedding (and there are lots nowadays), then you have to save the graphic as a PNG, JPEG, SVG, or (on a Mac) PDF, import it into Word as a picture, then crop and size it to suit your needs. That's easy enough. But when you make changes to the graphic, Word's 'Change Picture' function forgets the size and cropping you've so carefully set up, so you have to crop and size it again: every time! The **Replace Picture** function solves that problem by remembering the size and crop for the picture (and its border settings too). It makes changing external graphics as easy as object embedding!
+*  **Replacing Pictures**: If you have an graphic-creating tool that doesn't support Word embedding (and there are lots nowadays), then you have to save the graphic as a PNG, JPEG, SVG, or (on a Mac) PDF, import it into Word as a picture, then crop, size it, and set the borders to suit your needs. But when you make changes to the graphic, Word's 'Change Picture' function destroys the size and cropping you've so carefully set up, so you have to crop, size it, and reset the borders again--every time! The **Replace Picture** function solves that problem by remembering the size and crop for the picture (and its border settings too). It makes changing external graphics as easy as object embedding!
 
-* **Updating**: Word doesn't update its fields consistently, especially cross references. Only when you print does it update the fields, so only then do you see the errors from lost field references (and even then with some fields you may need to print twice!). The **Update All** function solves that problem by fully updating every field.
+* **Updating**: Word doesn't update its fields consistently, especially cross references, until **after** you've done a print. The **Update All** function solves that problem by fully updating every field.
 
-The plug-in works on the latest (2021) Microsoft Office installations: Word for Windows version 16, and Word for Mac version 16. It does not support Word 365 online, since that doesn't support VBA (or floating images and tables, either).
+## Compatibility
+
+The plug-in works on the latest (2021) Microsoft Office installations: Word for Windows version 16, and Word for Mac version 16. It does not work with Word 365 online since that has no support for VBA, floating images, or tables.
 
 ## <a name="instructions"/> The Functions (and When to Use Them)
 
@@ -45,14 +51,14 @@ The plug-in just adds the 6 buttons described above to the Layout tab. It is har
  
 ### On Windows
 
-Download and run the installer [*ImagesAndTableSupport.msi* here](https://github.com/charlesweir/WordImagesAndTables/releases/latest/download/ImageAndTableSupport.msi)
+Download and run the installer [*ImagesAndTableSupport.msi* here](https://github.com/charlesweir/FrameFlow/releases/latest/download/ImageAndTableSupport.msi)
 
-**Note** - this may not work if your account cannot install software, if the user template location is not the default, or for certain langage versions of Word (such as Turkish). If not, download [*ImageAndTableSupport.dotm* here](https://github.com/charlesweir/WordImagesAndTables/releases/latest/download/ImageAndTableSupport.dotm), and copy it into the Word startup folder:*%AppData%\Microsoft\Word\Startup*  
+**Note** - this may not work if your account cannot install software, if the user template location is not the default, or for certain langage versions of Word (such as Turkish). If not, download [*ImageAndTableSupport.dotm* here](https://github.com/charlesweir/FrameFlow/releases/latest/download/ImageAndTableSupport.dotm), and copy it into the Word startup folder:*%AppData%\Microsoft\Word\Startup*  
 To go to that directory in Windows File Explorer, type *%AppData%\Microsoft\Word\* into the address bar and hit enter. Create the STARTUP folder if it is not there, or double click on it to enter it.
 
 ### On Mac
 
-Download the file [*ImageAndTableSupport.dotm* here](https://github.com/charlesweir/WordImagesAndTables/releases/latest/download/ImageAndTableSupport.dotm) and move it to *~/Library/Group Containers/UBF8T346G9.Office/User Content/Startup/Word*  
+Download the file [*ImageAndTableSupport.dotm* here](https://github.com/charlesweir/FrameFlow/releases/latest/download/ImageAndTableSupport.dotm) and move it to *~/Library/Group Containers/UBF8T346G9.Office/User Content/Startup/Word*  
 
 To get to that folder in Finder, use Cmd-Shift-G, paste the above string into the dialog and click OK. If it's not there, try *~/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/Word*
 
@@ -62,7 +68,7 @@ To get to that folder in Finder, use Cmd-Shift-G, paste the above string into th
 
 ### If You Cannot Get Installation to Work
 
-If your computer is set up by an Information Systems department, then you may well be unable to install software, and you might even be unable to copy files to the Word STARTUP directory as described above. In that case copy the [*ImageAndTableSupport.dotm*](https://github.com/charlesweir/WordImagesAndTables/releases/latest/download/ImageAndTableSupport.dotm) file somewhere convenient in your working directory, and use [these instructions]( https://www.dummies.com/software/microsoft-office/word/how-to-change-a-documents-template-in-word-2016/) to attach the functions to each Word docx file you are working with.
+If your computer is set up by an Information Systems department, then you may well be unable to install software, and you might even be unable to copy files to the Word STARTUP directory as described above. In that case copy the [*ImageAndTableSupport.dotm*](https://github.com/charlesweir/FrameFlow/releases/latest/download/ImageAndTableSupport.dotm) file somewhere convenient in your working directory, and use [these instructions]( https://www.dummies.com/software/microsoft-office/word/how-to-change-a-documents-template-in-word-2016/) to attach the functions to each Word docx file you are working with.
 
 ## Upgrading and Uninstalling.
 
@@ -91,7 +97,6 @@ To **Create the MSI package**, you need to install [Wix 3.11.2](https://github.c
 ## How it works 
 
 The **New Figure**, **New Table** and **Reposition** functions automate the manual instructions to create a floating frame from my [blog entry here](https://www.securedevelopment.org/2019/08/18/three-powerful-techniques-to-position-images-and-tables-in-word/). The **Relayout Document** implementation is based on LaTeX's image positioning rules. Briefly, it finds all the frames that match the selection criteria [above](#relayoutDocument) and prompts to continue. It then moves ('stashes') all the frames at the end of the document. Lastly, it takes each one, in the order that the references appear in the text, and tries to position it in the next of the slots available (top and bottom of a page, or top and bottom of each colum), moving the frame anchor forward and adjusting the frame layout parameters until it finds a position that works. 
-
 
 ## Troubleshooting
 
