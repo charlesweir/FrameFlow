@@ -1,7 +1,5 @@
-# Microsoft Word Plug-in to Lay Out Images and Tables as a Desktop Publisher
-
-<br>
 Flawless floating images and tables — placed exactly where they belong!
+
 
 Bring professional layout control to Microsoft Word. FrameFlow for Word automatically positions framed images and tables near their references, keeping your document clean, consistent, and visually appealing. Preserve image cropping, update all fields in one click, and give Word the layout control it's always needed.
 
