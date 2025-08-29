@@ -13,13 +13,13 @@ This add-in does just that. It makes it easy to insert pictures and tables withi
 
 The plug-in also addresses two limitations of Word:
 
-*  **Replacing Pictures**: If you have an graphic-creating tool that doesn't support Word embedding (and there are lots nowadays), then you have to save the graphic as a PNG, JPEG, SVG, or (on a Mac) PDF, import it into Word as a picture, then crop, size it, and set the borders to suit your needs. But when you make changes to the graphic, Word's 'Change Picture' function destroys the size and cropping you've so carefully set up, so you have to crop, size it, and reset the borders again--every time! The **Replace Picture** function solves that problem by remembering the size and crop for the picture (and its border settings too). It makes changing external graphics as easy as object embedding!
+*  **Replacing Pictures**: If you have an graphic-creating tool that doesn't support Word embedding (and there are lots nowadays), then you have to save the graphic as a PNG, JPEG, SVG, or (on a Mac) PDF, import it into Word as a picture, then crop, size it, and set the borders to suit your needs. But when you make changes to the graphic, Word's 'Change Picture' function destroys the size and cropping you've so carefully set up, so you have to crop, size it, and reset the borders again--every time! The **Replace Picture** function solves that problem by remembering the size and crop for the picture (and its border settings too). It makes changing external graphics almost as easy as object embedding!
 
 * **Updating**: Word doesn't update its fields consistently, especially cross references, until **after** you've done a print. The **Update All** function solves that problem by fully updating every field.
 
 ## Compatibility
 
-The plug-in works on the latest (2021) Microsoft Office installations: Word for Windows version 16, and Word for Mac version 16. It does not work with Word 365 online since that has no support for VBA, floating images, or tables.
+The plug-in works on the latest (as at 2025) Microsoft Office installations: Word for Windows version 16, and Word for Mac version 16. It does not work with Word 365 online since that has no support for VBA, floating images, or tables.
 
 ## <a name="instructions"/> The Functions (and When to Use Them)
 
@@ -29,7 +29,7 @@ The plug-in creates six new buttons in the *Layout* tab:
 
 **New Table**: creates a new table in a frame with a caption, plus a reference to it at the insertion point. Replace the table with what you want. The frame starts at the bottom of the page; again, use  **Reposition** or **Relayout Document** to move it around.
 
-**Replace Picture**: does the same as Word's **Change Picture** button, but keeps the same size and cropping. Select an image before use. 
+**Replace Picture**: does the same as Word's **Change Picture** button, but keeps the same size, cropping and borders. Select an image before use. 
 
 **Reposition**: moves a frame around the page consistently with the LaTeX formatting rules. So big frames go at the top or bottom of the page; small frames in a two-column page go at the top or bottom of a column; small frames in a single-column page go to the left or right of the text. Clicking the button twice moves the frame to another position: top vs bottom, or left vs right. The operation doesn't move the frame's anchor, so the frame always stays on the same page. Just select a frame and try it!
 
@@ -39,7 +39,7 @@ The plug-in creates six new buttons in the *Layout* tab:
 
 ## Using the Functions
 
-All the functions support **Undo**, so experiment as much as you like!
+All the functions support **Undo**, so experiment as much as you like! On Word for Mac, you may see occasionally see random errors since it has a less reliable VBA system--just ignore the errors and retry. 
 
 We recommend doing **Update All** after **Relayout Document**, as the figure, table and page numbering may change.
 
