@@ -105,3 +105,7 @@ The **New Figure**, **New Table** and **Reposition** functions automate the manu
 * That (in a single-column section of the document) the frame isn't set to align *left* or *right*. This is a feature to permit small figures with text wrapped around them.
 
 **Crashes and aborts**: Occasionally, you may see **Relayout Document** fail with an 'Assertion' error. This means that Word is not behaving as it is supposed to. In particular, Word can take quite a while after you open a document before it has actually set up all the editing information related to that document; so, just wait a bit and try again. Also, Word for Mac is a bit flaky, and complicated operations like **Relayout Document** can occasionally just terminate Word for Mac without warning or explanation (though I've never seen that happen in Word for Windows). Restarting and trying again usually works.
+
+## Next Steps
+
+Please register any defects found using the GitHub Issues feature. We can't promise to address them with any particular speed, but we'll be glad to help if we can.
