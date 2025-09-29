@@ -52,7 +52,7 @@ The plug-in just adds the 6 buttons described above to the Layout tab. It is har
 Download and run the installer [*ImagesAndTableSupport.msi* here](https://github.com/charlesweir/FrameFlow/releases/latest/download/ImageAndTableSupport.msi)
 
 **Note** - this may not work if your account cannot install software, if the user template location is not the default, or for certain langage versions of Word (such as Turkish). If not, download [*ImageAndTableSupport.dotm* here](https://github.com/charlesweir/FrameFlow/releases/latest/download/ImageAndTableSupport.dotm), and copy it into the Word startup folder:*%AppData%\Microsoft\Word\Startup*  
-To go to that directory in Windows File Explorer, type *%AppData%\Microsoft\Word\* into the address bar and hit enter. Create the STARTUP folder if it is not there, or double click on it to enter it.
+To go to that directory in Windows File Explorer, type *%AppData%\Microsoft\Word\ * into the address bar and hit enter. Create the STARTUP folder if it is not there, or double click on it to enter it.
 
 ### On Mac
 
