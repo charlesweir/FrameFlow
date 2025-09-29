@@ -13,13 +13,13 @@ This add-in does just that. It makes it easy to insert pictures and tables withi
 
 The plug-in also addresses two limitations of Word:
 
-*  **Replacing Pictures**: If you have an graphic-creating tool that doesn't support Word embedding (and there are lots nowadays), then you have to save the graphic as a PNG, JPEG, SVG, or (on a Mac) PDF, import it into Word as a picture, then crop, size it, and set the borders to suit your needs. But when you make changes to the graphic, Word's 'Change Picture' function destroys the size and cropping you've so carefully set up, so you have to crop, size it, and reset the borders again--every time! The **Replace Picture** function solves that problem by remembering the size and crop for the picture (and its border settings too). It makes changing external graphics almost as easy as object embedding!
+*  **Replacing Pictures**: If you have an graphic-creating tool that doesn't support Word embedding (and there are lots nowadays), then you have to save the graphic as a PNG, JPEG, SVG, or (on a Mac) PDF; import it into Word as a picture; then crop, size it, and set the borders to suit your needs. But when you make changes to the graphic, Word's 'Change Picture' function destroys the size and cropping you've so carefully set up, so you have to crop, size it, and reset the borders again--every time! The **Replace Picture** function solves that problem by remembering the size, cropping and border settings for the picture. It makes changing external graphics almost as easy as object embedding!
 
-* **Updating**: Word doesn't update its fields consistently, especially cross references, until **after** you've done a print. The **Update All** function solves that problem by fully updating every field.
+* **Updating**: Word doesn't update its fields consistently, especially cross references, until **after** you've done a print. The **Update All** function solves that problem by fully updating every field whenever you want.
 
 ## Compatibility
 
-The plug-in works on the latest (as at 2025) Microsoft Office installations: Word for Windows version 16, and Word for Mac version 16. It does not work with Word 365 online since that has no support for VBA, floating images, or tables.
+The plug-in works on the latest (as at 2025) Microsoft Office installations: Word for Windows version 16, and Word for Mac version 16. It does not work with Word 365 online since that has no support for VBA--nor floating images or tables, in fact.
 
 ## <a name="instructions"/> The Functions (and When to Use Them)
 
@@ -29,7 +29,7 @@ The plug-in creates six new buttons in the *Layout* tab:
 
 **New Table**: creates a new table in a frame with a caption, plus a reference to it at the insertion point. Replace the table with what you want. The frame starts at the bottom of the page; again, use  **Reposition** or **Relayout Document** to move it around.
 
-**Replace Picture**: does the same as Word's **Change Picture** button, but keeps the same size, cropping and borders. Select an image before use. 
+**Replace Picture**: does the same as Word's **Change Picture** button, but keeps the same size, cropping and borders. Select an image to replace before use. 
 
 **Reposition**: moves a frame around the page consistently with the LaTeX formatting rules. So big frames go at the top or bottom of the page; small frames in a two-column page go at the top or bottom of a column; small frames in a single-column page go to the left or right of the text. Clicking the button twice moves the frame to another position: top vs bottom, or left vs right. The operation doesn't move the frame's anchor, so the frame always stays on the same page. Just select a frame and try it!
 
@@ -74,11 +74,11 @@ To upgrade, simply install the latest version as above, overwriting the previous
 
 To uninstall, use Windows' uninstall of 'Image and Table Support for Microsoft Word'. On the Mac or the non-standard Windows installations, delete the file *ImageAndTableSupport.dotm* in the directory given above.
 
-## Changing the Layout of the Picture and Table Frames
+## Changing the Styles of the Picture and Table Frames
 
 The **New Figure** and **New Table** frames use several Word styles; feel free to modify them in your document as required:
 
-- **Caption** is the standard Word style for captions – probably best centred.
+- **Caption** is the standard Word paragraph style for captions – probably best centred.
 - **Figure** is a paragraph style for the figures – probably best centred.
 - **Table End** is for the blank spacing paragraph following a table, and should be tiny (typically font size 2pt). 
 
@@ -100,11 +100,11 @@ The **New Figure**, **New Table** and **Reposition** functions automate the manu
 
 **Relayout problems**: Sometimes **Relayout Document** may fail to identify some of the images and table frames to layout, and the result is usually messy. A good way to spot the problem is to check the count in the "Found <count> Figures and Tables to layout" dialog and see if that corresponds to the number of figures + tables you want laid out. Omitted frames can be because of a Word documentation corruption somewhere. If a frame is omitted, check:
 * That the image or table concerned is in a frame and has a caption within the frame. **Relayout Document** doesn't lay out floating images -- even ones with captions -- unless they're in a frame.
-* That the frame you want laid out has a corresponding reference to its caption *in the same section* in the main text (this feature allows you to have forward references to images or tables in earlier sections)
+* That the frame you want laid out has a corresponding reference to its caption *in the same section* in the main text (this feature allows you to have forward references to images or tables in later sections)
 * That the invisible bookmark in the caption has not got lost; do **Update All**, and fix any references that show **Error! Reference source not found.**
 * That (in a single-column section of the document) the frame isn't set to align *left* or *right*. This is a feature to permit small figures with text wrapped around them.
 
-**Crashes and aborts**: Occasionally, you may see **Relayout Document** fail with an 'Assertion' error. This means that Word is not behaving as it is supposed to. In particular, Word can take quite a while after you open a document before it has actually set up all the editing information related to that document; so, just wait a bit and try again. Also, Word for Mac is a bit flaky, and complicated operations like **Relayout Document** can occasionally just terminate Word for Mac without warning or explanation (though I've never seen that happen in Word for Windows). Restarting and trying again usually works.
+**Crashes and aborts**: Occasionally, you may see **Relayout Document** fail with an 'Assertion' error. This means that Word is not behaving as it is supposed to. In particular, Word can take quite a while after you open a document before it has actually set up all the editing information related to that document; so, just wait a bit and try again. Also, Word for Mac is a bit flaky, and complicated operations like **Relayout Document** can occasionally just terminate Word for Mac without warning or explanation (I've never seen that happen in Word for Windows). Restarting and trying again usually works.
 
 ## Next Steps
 
